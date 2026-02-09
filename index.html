@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador de Destinos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+            <h1>🌍 Explorador de Destinos</h1>
+            <p class="subtitle">Descubra novos lugares para visitar</p>
+        </header>
+
+        <main>
+            <!-- Seção de Localização -->
+            <section class="location-section">
+                <h2>📍 Seu Ponto de Partida</h2>
+                <div id="location-info" class="info-box">
+                    <p class="loading">Buscando sua localização...</p>
+                </div>
+                <button id="get-location-btn" class="btn btn-secondary">
+                    Atualizar Localização
+                </button>
+            </section>
+
+            <!-- Seção de Postagem Atual -->
+            <section class="post-section">
+                <h2>✨ Destino Sugerido</h2>
+                <div id="post-container" class="post-card">
+                    <div class="post-header">
+                        <span id="post-id" class="post-id"></span>
+                    </div>
+                    <h3 id="post-title" class="post-title">Carregando...</h3>
+                    <div class="post-actions">
+                        <button id="fetch-post-btn" class="btn btn-primary">
+                            🔄 Novo Destino
+                        </button>
+                        <button id="save-favorite-btn" class="btn btn-success">
+                            ⭐ Salvar Favorito
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção de Favoritos -->
+            <section class="favorites-section">
+                <h2>💖 Seus Destinos Favoritos</h2>
+                <div id="favorites-list" class="favorites-list">
+                    <p class="empty-state">Nenhum favorito salvo ainda</p>
+                </div>
+                <button id="clear-favorites-btn" class="btn btn-danger" style="display: none;">
+                    🗑️ Limpar Favoritos
+                </button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Dados da API: JSONPlaceholder</p>
+        </footer>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
